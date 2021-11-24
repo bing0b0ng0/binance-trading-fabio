@@ -41,7 +41,7 @@ class Header extends React.Component {
 
             <div className='header-column-icon-wrapper github-wrapper'>
               <a
-                href='https://github.com/chrisleekr/binance-trading-bot'
+                href='https://github.com/bing0b0ng0/binance-trading-fabio/'
                 target='_blank'
                 className='btn btn-sm p-0 pl-1 pr-1'
                 rel='noreferrer'>
