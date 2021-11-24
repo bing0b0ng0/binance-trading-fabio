@@ -3,7 +3,7 @@ version: '3.7'
 services:
   binance-bot:
     container_name: binance-bot
-    image: chrisleekr/binance-trading-bot:latest
+    image: bing0b0ng0/binance-trading-fabio:latest
     networks:
       - internal
     env_file:
@@ -24,7 +24,7 @@ services:
 
   tradingview:
     container_name: tradingview
-    image: chrisleekr/binance-trading-bot:tradingview
+    image: bing0b0ng0/binance-trading-fabio:tradingview
     networks:
       - internal
     restart: unless-stopped
@@ -45,8 +45,7 @@ services:
     volumes:
       - redis_data:/data
       - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
-    command:
-      redis-server /usr/local/etc/redis/redis.conf --requirepass secretp422
+    command: redis-server /usr/local/etc/redis/redis.conf --requirepass secretp422
 
   binance-mongo:
     container_name: binance-mongo
@@ -65,5 +64,5 @@ networks:
     #     com.docker.network.driver.mtu: 1442
 
 volumes:
-  redis_data:
-  mongo_data:
+  redis_data: null
+  mongo_data: null
