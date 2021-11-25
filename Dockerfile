@@ -16,15 +16,15 @@ COPY . .
 
 ARG PACKAGE_VERSION=untagged
 ENV PACKAGE_VERSION=${PACKAGE_VERSION}
-LABEL com.chrisleekr.binance-trading-bot.package-version=${PACKAGE_VERSION}
+LABEL com.bing0b0ng0.binance-trading-fabio.package-version=${PACKAGE_VERSION}
 
 ARG GIT_HASH=unspecified
 ENV GIT_HASH=${GIT_HASH}
-LABEL com.chrisleekr.binance-trading-bot.git-hash=${GIT_HASH}
+LABEL com.bing0b0ng0.binance-trading-fabio.git-hash=${GIT_HASH}
 
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
-LABEL com.chrisleekr.binance-trading-bot.node-env=${NODE_ENV}
+LABEL com.bing0b0ng0.binance-trading-fabio.node-env=${NODE_ENV}
 
 ENTRYPOINT [ "docker-entrypoint.sh" ]
 
@@ -46,15 +46,15 @@ FROM node:14-alpine AS production-stage
 
 ARG PACKAGE_VERSION=untagged
 ENV PACKAGE_VERSION=${PACKAGE_VERSION}
-LABEL com.chrisleekr.binance-trading-bot.package-version=${PACKAGE_VERSION}
+LABEL com.bing0b0ng0.binance-trading-fabio.package-version=${PACKAGE_VERSION}
 
 ARG GIT_HASH=unspecified
 ENV GIT_HASH=${GIT_HASH}
-LABEL com.chrisleekr.binance-trading-bot.git-hash=${GIT_HASH}
+LABEL com.bing0b0ng0.binance-trading-fabio.git-hash=${GIT_HASH}
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
-LABEL com.chrisleekr.binance-trading-bot.node-env=${NODE_ENV}
+LABEL com.bing0b0ng0.binance-trading-fabio.node-env=${NODE_ENV}
 
 # Add configuration files
 COPY image-files/ /

@@ -3,7 +3,7 @@ version: '3.7'
 services:
   binance-bot:
     container_name: binance-bot
-    image: bing0b0ng0/binance-trading-fabio:latest
+    image: bing0b0ng0/binance-trading-fabio:bot
     networks:
       - internal
     env_file:
